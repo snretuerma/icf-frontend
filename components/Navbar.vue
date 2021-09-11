@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar fixed prominent flat id="nav-bar" color="transparent">
+  <v-app-bar fixed prominent flat id="nav-bar" color="transparent" app>
     <v-toolbar-title id="toolbar-title">
       <v-img
         contain
