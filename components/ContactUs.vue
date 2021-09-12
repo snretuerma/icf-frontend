@@ -1,5 +1,5 @@
 <template>
-  <div class="mr-10 pr-10 mt-10 mb-10">
+  <div class="mr-10 pr-10 mb-10">
     <v-card class="offset-5">
       <v-row no-gutters>
         <v-col>

@@ -1,5 +1,14 @@
 <template>
-  <v-app-bar app fixed prominent flat id="nav-bar" color="transparent">
+  <v-app-bar 
+    app 
+    absolute 
+    prominent 
+    flat 
+    id="nav-bar" 
+    color="transparent" 
+      :collapse="!collapseOnScroll"
+      :collapse-on-scroll="collapseOnScroll"
+    >
     <v-toolbar-title id="toolbar-title">
       <v-img
         contain
@@ -62,6 +71,16 @@
     </template>
   </v-app-bar>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      collapseOnScroll: true,
+    }
+  }
+}
+</script>
 
 <style>
 #nav-bar {
