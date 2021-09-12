@@ -1,13 +1,17 @@
 <template>
   <v-main app>
       <div class="mt-15">
-        <v-card>
-          <v-card flat>
-            <LandingPage/>
-          </v-card>
+        <v-card flat>
+          <LandingPage />
         </v-card>
         <v-card flat>
           <WhatWeDo />
+        </v-card>
+        <v-card flat>
+          <CaseStudies />
+        </v-card>
+        <v-card flat>
+          <NewsAndEvents />
         </v-card>
         <v-card flat>
           <ContactUs />
