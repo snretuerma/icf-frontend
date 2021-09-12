@@ -44,7 +44,7 @@
                                                         />   
                                                         </v-expand-transition>
                                                     </div>
-                                                    <v-card-text style="position: relative;">
+                                                    <v-card-text style="position: relative;" class="pt-10">
                                                         <v-row>
                                                             <v-col align="center" justify="center">
                                                                 <h3 class="text-h4 font-weight-light mb-2">
