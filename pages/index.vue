@@ -1,5 +1,14 @@
 <template>
-<div class="mt-15">
-  <ContactUs/>
-</div>
+  <v-main>
+    <v-container>
+      <div class="mt-15">
+        <v-card flat>
+          <WhatWeDo />
+        </v-card>
+        <v-card flat>
+          <ContactUs />
+        </v-card>
+      </div>
+    </v-container>
+  </v-main>
 </template>
