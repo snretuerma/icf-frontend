@@ -5,7 +5,7 @@
         <v-col>
           <v-card flat height="100%" class="px-10 py-10">
             <v-card-title class="justify-center primary--text">
-              <span id="contact-card-title" class="font-weight-regular">
+              <span class="card-title font-weight-regular">
                 /CONTACT US/
               </span>
             </v-card-title>
@@ -102,9 +102,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-#contact-card-title {
-  font-size: 1.5em;
-}
-</style>

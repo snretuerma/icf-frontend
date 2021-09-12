@@ -4,7 +4,7 @@
       <v-card flat color="transparent">
         <v-card-title>
           <v-row>
-            <v-col align="center" justify="center" class="primary--text">
+            <v-col align="center" justify="center" class="primary--text card-title">
               / NEWS & EVENTS /
             </v-col>
           </v-row>
@@ -169,3 +169,9 @@
     </v-col>
   </v-row>
 </template>
+
+<style>
+#card-title {
+  font-size: 1.5em !important;
+}
+</style>

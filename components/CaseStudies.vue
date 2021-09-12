@@ -3,7 +3,7 @@
     <v-card flat>
          <v-card-title>
           <v-row>
-            <v-col align="center" justify="center" class="primary--text">
+            <v-col align="center" justify="center" class="primary--text card-title">
               / CASE STUDIES /
             </v-col>
           </v-row>

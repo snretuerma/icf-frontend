@@ -15,7 +15,7 @@
                         <v-col>
                             <v-card flat color="transparent">
                                 <v-container>
-                                    <v-card-title class="primary--text">
+                                    <v-card-title class="card-title primary--text">
                                         / INDUSTRIES /
                                     </v-card-title>
                                     <v-card-text>
@@ -78,7 +78,7 @@
                         <v-col>
                             <v-card flat color="transparent">
                                 <v-container>
-                                    <v-card-title class="primary--text">
+                                    <v-card-title class="card-title primary--text">
                                         / SERVICES /
                                     </v-card-title>
                                     <v-card-text>
