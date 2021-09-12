@@ -1,6 +1,5 @@
 <template>
-  <v-main>
-    <v-container>
+  <v-main app>
       <div class="mt-15">
         <v-card flat>
           <WhatWeDo />
@@ -9,6 +8,5 @@
           <ContactUs />
         </v-card>
       </div>
-    </v-container>
   </v-main>
 </template>
