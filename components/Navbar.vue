@@ -8,9 +8,9 @@
       v-if="scrolling"
     >
       <v-spacer></v-spacer>
-      <v-btn class="mx-4 mt-4" fab dark color="#0D47A1" @click="showToolbar">
-        <v-icon dark>
-          mdi-chevron-left
+      <v-btn class="mx-4 mt-4" fab dark color="white" @click="showToolbar">
+        <v-icon color="#0D47A1">
+          mdi-menu-open
         </v-icon>
       </v-btn>
     </v-toolbar>
