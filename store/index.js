@@ -1,12 +1,14 @@
 export const state = () => ({
-  scrolling: false
+  scrolled: 0,
+  menu: false
 });
 
 export const mutations = {
   onScroll(state) {
-    state.scrolling = true;
+    state.scrolled++;
+    state.menu = true;
   },
   showMenu(state) {
-      state.scrolling = false;
+      state.menu = false;
   }
 };

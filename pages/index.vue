@@ -32,6 +32,7 @@
 </template>
 <script>
 export default {
+  
   methods: {
     onScroll () {
       this.$store.commit('onScroll')

@@ -5,7 +5,7 @@
       absolute
       id="nav-bar-collapse"
       color="transparent"
-      v-if="scrolling"
+      v-if="menu"
     >
       <v-spacer></v-spacer>
       <v-btn class="mx-4 mt-4" fab dark color="white" @click="showToolbar">
@@ -85,8 +85,8 @@
 <script>
 export default {
   computed: {
-    scrolling() {
-      return this.$store.state.scrolling;
+    menu() {
+      return this.$store.state.menu;
     }
   },
   methods: {
