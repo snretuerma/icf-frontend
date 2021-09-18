@@ -15,10 +15,10 @@
                   <v-col justify="center" align="center" class="mt-5">
                     <v-img
                       contain
-                      lazy-src="/images/logo_full-white.png"
+                      lazy-src="/images/footer-logo.png"
                       max-height="85"
                       max-width="120"
-                      src="/images/logo_full-white.png"
+                      src="/images/footer-logo.png"
                     ></v-img>
                   </v-col>
                 </v-row>

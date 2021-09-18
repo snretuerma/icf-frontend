@@ -102,3 +102,10 @@ export default {
   }
 };
 </script>
+
+<style>
+#contact-us-container {
+  /* background: url('~static/images/ContactUs.png') no-repeat center center fixed !important;
+  background-size: cover; */
+}
+</style>

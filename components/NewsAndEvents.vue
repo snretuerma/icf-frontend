@@ -1,4 +1,5 @@
 <template>
+<v-container fluid fill-height>
   <v-row>
     <v-col>
       <v-card flat color="transparent">
@@ -168,6 +169,7 @@
       </v-card>
     </v-col>
   </v-row>
+  </v-container>
 </template>
 
 <style>

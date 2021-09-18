@@ -1,15 +1,21 @@
 <template>
-    <v-container>
+    <v-container fluid fill-height>
         <v-row>
-            <v-col>
+            <v-col
+                align="center"
+                justify="center"
+            >
                 <v-card flat>
-                    <v-row>
-                        <v-col cols="3">
-                            <v-card-title align="center" justify="center" class="primary--text card-title">
-                                / INVESTORS OVERVIEW /
+                    <v-container fluid fill-height>
+                        <v-row>
+                        <v-col cols="4" align="right" justify="center">
+                            <v-card-title class="primary--text justify-center">
+                                <span class="primary--text title-accent-left">/</span>
+                                <span class="text-h5 blue--text text--darken-4">INVESTORS OVERVIEW</span>
+                                <span class="primary--text title-accent-right">/</span>
                             </v-card-title>
                         </v-col>
-                        <v-col cols="9" align="left" justify="center">
+                        <v-col cols="8" align="left" justify="center">
                             <p>
                                 ICF (NASDAQ:ICF) is leading provider of professional serives and technology-based <br>
                                 solutions to government and commercial clients.
@@ -300,6 +306,8 @@
                             </v-card>
                         </v-col>
                     </v-row>
+                    </v-container>
+                    
                 </v-card>
             </v-col>
         </v-row>

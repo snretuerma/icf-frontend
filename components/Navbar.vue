@@ -1,14 +1,13 @@
 <template>
-  <v-app-bar 
-    app 
-    absolute 
+  <v-toolbar 
     prominent 
-    flat 
+    flat
+    absolute
     id="nav-bar" 
     color="transparent" 
-      :collapse="!collapseOnScroll"
-      :collapse-on-scroll="collapseOnScroll"
-    >
+    :collapse="!collapseOnScroll"
+    :collapse-on-scroll="collapseOnScroll"
+  >
     <v-toolbar-title id="toolbar-title">
       <v-img
         contain
@@ -28,30 +27,31 @@
           flat
           outlined
           append-icon="mdi-magnify"
+          class="text-field-transparent"
         >
           <template v-slot:prepend>
-            <v-btn text>
+            <v-btn text color="primary">
               <v-icon left>
                 mdi-menu-right
               </v-icon>
               <span class="hidden-sm-and-down">Blog</span>
             </v-btn>
 
-            <v-btn text>
+            <v-btn text color="primary">
               <v-icon left>
                 mdi-menu-right
               </v-icon>
               <span class="hidden-sm-and-down">News & Events</span>
             </v-btn>
 
-            <v-btn text>
+            <v-btn text color="primary">
               <v-icon left>
                 mdi-menu-right
               </v-icon>
               <span class="hidden-sm-and-down">Careers</span>
             </v-btn>
 
-            <v-btn text>
+            <v-btn text color="primary">
               <v-icon left>
                 mdi-menu-right
               </v-icon>
@@ -63,13 +63,13 @@
     </v-row>
     <template v-slot:extension>
       <v-tabs centered fixed-tabs>
-        <v-tab>Company</v-tab>
-        <v-tab>What We Do</v-tab>
-        <v-tab>Investors</v-tab>
-        <v-tab>Resources</v-tab>
+        <v-tab class="blue--text text--darken-4">Company</v-tab>
+        <v-tab class="blue--text text--darken-4">What We Do</v-tab>
+        <v-tab class="blue--text text--darken-4">Investors</v-tab>
+        <v-tab class="blue--text text--darken-4">Resources</v-tab>
       </v-tabs>
     </template>
-  </v-app-bar>
+  </v-toolbar >
 </template>
 
 <script>
@@ -85,6 +85,9 @@ export default {
 <style>
 #nav-bar {
   padding: 50px 150px 0px 150px;
+  position:fixed;
+  top:0;
+  width:100%;
 }
 #toolbar {
   padding: 5px 5px 0px 5px;
@@ -93,5 +96,8 @@ export default {
 #toolbar-title {
   background-color: white;
   padding: 100px 5px 10px 5px;
+}
+.text-field-transparent .v-input__slot{
+  background: transparent !important;
 }
 </style>
