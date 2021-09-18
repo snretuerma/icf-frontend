@@ -32,25 +32,26 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      scrollInvoked: 0,
-    };
-  },
-
   methods: {
     onScroll () {
-      
+      this.$store.commit('onScroll')
     },
   }
 };
 </script>
 <style>
+@media only screen and (max-width: 600px) {
+  .page-section {
+    max-height: -webkit-fill-available;
+    width: 100%;
+  }
+}
 .card-title {
   font-size: 1.5em !important;
 }
 .page-section {
   height: 100vh;
+  /* max-height: -webkit-fill-available; */
 }
 .title-accent-left{
   margin: 0px 10px 0px 0px;
@@ -60,5 +61,4 @@ export default {
   margin: 0px 0px 0px 10px;
   font-size: 2em;
 }
-
 </style>
