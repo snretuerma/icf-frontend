@@ -1,12 +1,11 @@
 <template>
   <div>
-    <v-toolbar
+    <v-app-bar
       flat
       absolute
       id="nav-bar-collapse"
       color="transparent"
       v-if="menu"
-      app
     >
       <v-spacer></v-spacer>
       <v-btn class="mx-4 mt-4" fab dark color="white" @click="showToolbar">
@@ -14,9 +13,9 @@
           mdi-menu-open
         </v-icon>
       </v-btn>
-    </v-toolbar>
+    </v-app-bar>
     <v-fade-transition v-else>
-      <v-toolbar prominent flat absolute id="nav-bar" color="transparent">
+      <v-app-bar prominent flat absolute id="nav-bar" color="transparent">
         <v-toolbar-title id="toolbar-title">
           <v-img
             contain
@@ -94,7 +93,7 @@
             >
           </v-tabs>
         </template>
-      </v-toolbar>
+      </v-app-bar>
     </v-fade-transition>
   </div>
 </template>
@@ -121,7 +120,8 @@ export default {
   },
   methods: {
     showToolbar() {
-      this.$store.commit("showMenu");
+      this.$store.commit("toggleMenu");
+      console.log(this.menu);
     },
     scroll(id) {
       if(id) {

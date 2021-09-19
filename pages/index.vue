@@ -2,7 +2,7 @@
   <v-app>
     <Navbar/>
     <v-main app>
-        <div v-scroll.self="onScroll">
+        <div v-scroll="onScroll">
           <v-card tag="section" class="item page-section" id="home" flat img="/images/Landing.png">
             <LandingPage/>
           </v-card>
@@ -37,7 +37,6 @@ import cssScrollSnapPolyfill from 'css-scroll-snap-polyfill'
 export default {
   methods: {
     onScroll () {
-      console.log("scrolling");
       this.$store.commit('onScroll')
     },
     init (){
