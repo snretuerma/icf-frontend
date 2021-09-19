@@ -3,27 +3,27 @@
     <Navbar/>
     <v-main app>
         <div v-scroll.self="onScroll">
-          <v-card tag="section" class="item page-section" flat img="/images/Landing.png">
+          <v-card tag="section" class="item page-section" id="home" flat img="/images/Landing.png">
             <LandingPage/>
           </v-card>
 
-          <v-card tag="section" class="item page-section" flat img="/images/WhatWeDo.png">
+          <v-card tag="section" class="item page-section" id="whatwedo" flat img="/images/WhatWeDo.png">
             <WhatWeDo/>
           </v-card>
 
-          <v-card tag="section" class="item page-section" flat img="/images/InvestorsOverview.png">
+          <v-card tag="section" class="item page-section" id="investorsoverview" flat img="/images/InvestorsOverview.png">
             <InvestorsOverview/>
           </v-card>
 
-          <v-card tag="section" class="item page-section" flat img="/images/CaseStudies.png">
+          <v-card tag="section" class="item page-section" id="casestudies" flat img="/images/CaseStudies.png">
             <CaseStudies/>
           </v-card>
 
-          <v-card tag="section" class="item page-section" flat img="/images/NewsEvents.png">
+          <v-card tag="section" class="item page-section" id="newsandevents" flat img="/images/NewsEvents.png">
             <NewsAndEvents/>
           </v-card>
 
-          <v-card tag="section" class="item page-section" flat img="/images/ContactUs.png">
+          <v-card tag="section" class="item page-section" id="contactus" flat img="/images/ContactUs.png">
             <ContactUs/>
           </v-card>
         </div>

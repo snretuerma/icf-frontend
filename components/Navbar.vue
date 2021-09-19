@@ -6,6 +6,7 @@
       id="nav-bar-collapse"
       color="transparent"
       v-if="menu"
+      app
     >
       <v-spacer></v-spacer>
       <v-btn class="mx-4 mt-4" fab dark color="white" @click="showToolbar">
@@ -28,7 +29,7 @@
         <v-spacer />
         <v-row id="toolbar" justify="end" align="center">
           <v-col cols="12" sm="10" md="10" class="py-0 my-0">
-            <v-text-field
+            <v-autocomplete
               label="SEARCH"
               dense
               solo
@@ -36,6 +37,10 @@
               outlined
               append-icon="mdi-magnify"
               class="text-field-transparent"
+              v-model="search"
+              :items="search_data"
+              clearable
+              @change="scroll(search)"
             >
               <template v-slot:prepend>
                 <v-btn text color="primary">
@@ -66,19 +71,31 @@
                   <span class="hidden-sm-and-down">Contact</span>
                 </v-btn>
               </template>
-            </v-text-field>
+            </v-autocomplete>
           </v-col>
         </v-row>
         <template v-slot:extension>
           <v-tabs centered fixed-tabs>
-            <v-tab class="blue--text text--darken-4">Company</v-tab>
-            <v-tab class="blue--text text--darken-4">What We Do</v-tab>
-            <v-tab class="blue--text text--darken-4">Investors</v-tab>
-            <v-tab class="blue--text text--darken-4">Resources</v-tab>
+            <v-tab class="blue--text text--darken-4" @click="scroll('home')"
+              >Company</v-tab
+            >
+            <v-tab class="blue--text text--darken-4" @click="scroll('whatwedo')"
+              >What We Do</v-tab
+            >
+            <v-tab
+              class="blue--text text--darken-4"
+              @click="scroll('investorsoverview')"
+              >Investors</v-tab
+            >
+            <v-tab
+              class="blue--text text--darken-4"
+              @click="scroll('casestudies')"
+              >Resources</v-tab
+            >
           </v-tabs>
         </template>
-      </v-toolbar></v-fade-transition
-    >
+      </v-toolbar>
+    </v-fade-transition>
   </div>
 </template>
 
@@ -89,9 +106,28 @@ export default {
       return this.$store.state.menu;
     }
   },
+  data() {
+    return {
+      search: '',
+      search_data: [
+        { text: 'Strategic Consulting for a Digital World' , value: 'home' },
+        { text: 'What We Do' , value: 'whatwedo' },
+        { text: 'Investor\'s Overview' , value: 'investorsoverview' },
+        { text: 'Case Studies' , value: 'casestudies' },
+        { text: 'News & Events' , value: 'newsandevents' },
+        { text: 'Contact Us' , value: 'contactus' },
+      ],
+    };
+  },
   methods: {
     showToolbar() {
       this.$store.commit("showMenu");
+    },
+    scroll(id) {
+      if(id) {
+        const element = document.getElementById(id);
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   }
 };
@@ -119,5 +155,11 @@ export default {
 }
 .text-field-transparent .v-input__slot {
   background: transparent !important;
+}
+.text-field-transparent .v-input__slot input {
+  color: rgb(49, 87, 170) !important;
+}
+.v-autocomplete.v-select--is-menu-active .v-input__icon--append .v-icon {
+  transform: none;
 }
 </style>
