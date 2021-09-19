@@ -9,6 +9,6 @@ export const mutations = {
     state.menu = true;
   },
   toggleMenu(state) {
-      state.menu = false;
+    state.menu = !state.menu;
   }
 };

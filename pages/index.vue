@@ -1,47 +1,82 @@
 <template>
   <v-app>
-    <Navbar/>
+    <Navbar />
     <v-main app>
-        <div v-scroll="onScroll">
-          <v-card tag="section" class="item page-section" id="home" flat img="/images/Landing.png">
-            <LandingPage/>
-          </v-card>
+      <div v-scroll="onScroll">
+        <v-card
+          tag="section"
+          class="item page-section"
+          id="home"
+          flat
+          img="/images/Landing.png"
+        >
+          <LandingPage />
+        </v-card>
 
-          <v-card tag="section" class="item page-section" id="whatwedo" flat img="/images/WhatWeDo.png">
-            <WhatWeDo/>
-          </v-card>
+        <v-card
+          tag="section"
+          class="item page-section"
+          id="whatwedo"
+          flat
+          img="/images/WhatWeDo.png"
+        >
+          <WhatWeDo />
+        </v-card>
 
-          <v-card tag="section" class="item page-section" id="investorsoverview" flat img="/images/InvestorsOverview.png">
-            <InvestorsOverview/>
-          </v-card>
+        <v-card
+          tag="section"
+          class="item page-section"
+          id="investorsoverview"
+          flat
+          img="/images/InvestorsOverview.png"
+        >
+          <InvestorsOverview />
+        </v-card>
 
-          <v-card tag="section" class="item page-section" id="casestudies" flat img="/images/CaseStudies.png">
-            <CaseStudies/>
-          </v-card>
+        <v-card
+          tag="section"
+          class="item page-section"
+          id="casestudies"
+          flat
+          img="/images/CaseStudies.png"
+        >
+          <CaseStudies />
+        </v-card>
 
-          <v-card tag="section" class="item page-section" id="newsandevents" flat img="/images/NewsEvents.png">
-            <NewsAndEvents/>
-          </v-card>
+        <v-card
+          tag="section"
+          class="item page-section"
+          id="newsandevents"
+          flat
+          img="/images/NewsEvents.png"
+        >
+          <NewsAndEvents />
+        </v-card>
 
-          <v-card tag="section" class="item page-section" id="contactus" flat img="/images/ContactUs.png">
-            <ContactUs/>
-          </v-card>
-        </div>
+        <v-card
+          tag="section"
+          class="item page-section"
+          id="contactus"
+          flat
+          img="/images/ContactUs.png"
+        >
+          <ContactUs />
+        </v-card>
+      </div>
     </v-main>
   </v-app>
-
 </template>
 <script>
-import cssScrollSnapPolyfill from 'css-scroll-snap-polyfill'
+import cssScrollSnapPolyfill from "css-scroll-snap-polyfill";
 
 export default {
   methods: {
-    onScroll () {
-      this.$store.commit('onScroll')
+    onScroll() {
+      this.$store.commit("onScroll");
     },
-    init (){
-        cssScrollSnapPolyfill()
-      }
+    init() {
+      cssScrollSnapPolyfill();
+    }
   },
   mounted() {
     this.init();
@@ -50,9 +85,9 @@ export default {
 </script>
 <style>
 html {
-	scroll-snap-type: mandatory;
-	scroll-snap-points-y: repeat(100vh);
-	scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
 }
 @media only screen and (max-width: 600px) {
   .page-section {
@@ -69,21 +104,21 @@ html {
   scroll-snap-align: start;
   /* max-height: -webkit-fill-available; */
 }
-.title-accent-left{
+.title-accent-left {
   margin: 0px 10px 0px 0px;
   font-size: 2em;
 }
-.title-accent-right{
+.title-accent-right {
   margin: 0px 0px 0px 10px;
   font-size: 2em;
 }
- .item {
-    /* Set the minimum height of the items to be the same as the height of the scroll-snap-container.*/
-    min-height: 100vh;
-  }
+.item {
+  /* Set the minimum height of the items to be the same as the height of the scroll-snap-container.*/
+  min-height: 100vh;
+}
 
-  .scroll-snap-container {
-    height: 100vh;
-    width: 100%;
-  }
+.scroll-snap-container {
+  height: 100vh;
+  width: 100%;
+}
 </style>

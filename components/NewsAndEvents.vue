@@ -5,11 +5,7 @@
         <v-card flat color="transparent">
           <v-card-title>
             <v-row>
-              <v-col
-                align="center"
-                justify="center"
-                class="card-title"
-              >
+              <v-col align="center" justify="center" class="card-title">
                 <span class="primary--text title-accent-left">/</span>
                 <span class="white--text">NEWS & EVENTS</span>
                 <span class="primary--text title-accent-right">/</span>
@@ -182,22 +178,21 @@
               </v-col>
             </v-row>
           </v-card-actions> -->
-
         </v-card>
       </v-col>
     </v-row>
     <div id="view-all-events-button">
-            <v-row>
-              <v-col align="center" justify="center">
-                <v-btn tile color="primary lighten-1" x-large>
-                  VIEW ALL NEWS & EVENTS
-                  <v-icon right>
-                    mdi-arrow-right
-                  </v-icon>
-                </v-btn>
-              </v-col>
-            </v-row>
-          </div>
+      <v-row>
+        <v-col align="center" justify="center">
+          <v-btn tile color="primary lighten-1" x-large>
+            VIEW ALL NEWS & EVENTS
+            <v-icon right>
+              mdi-arrow-right
+            </v-icon>
+          </v-btn>
+        </v-col>
+      </v-row>
+    </div>
   </v-container>
 </template>
 
@@ -207,6 +202,7 @@
 }
 #view-all-events-button {
   position: absolute;
-  top: 90vh; left: 45%;
+  top: 90vh;
+  left: 45%;
 }
 </style>

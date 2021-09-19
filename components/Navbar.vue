@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar
+    <v-toolbar
       flat
       absolute
       id="nav-bar-collapse"
@@ -13,9 +13,9 @@
           mdi-menu-open
         </v-icon>
       </v-btn>
-    </v-app-bar>
+    </v-toolbar>
     <v-fade-transition v-else>
-      <v-app-bar prominent flat absolute id="nav-bar" color="transparent">
+      <v-toolbar prominent flat absolute id="nav-bar" color="transparent">
         <v-toolbar-title id="toolbar-title">
           <v-img
             contain
@@ -93,7 +93,7 @@
             >
           </v-tabs>
         </template>
-      </v-app-bar>
+      </v-toolbar>
     </v-fade-transition>
   </div>
 </template>
@@ -107,25 +107,24 @@ export default {
   },
   data() {
     return {
-      search: '',
+      search: "",
       search_data: [
-        { text: 'Strategic Consulting for a Digital World' , value: 'home' },
-        { text: 'What We Do' , value: 'whatwedo' },
-        { text: 'Investor\'s Overview' , value: 'investorsoverview' },
-        { text: 'Case Studies' , value: 'casestudies' },
-        { text: 'News & Events' , value: 'newsandevents' },
-        { text: 'Contact Us' , value: 'contactus' },
-      ],
+        { text: "Strategic Consulting for a Digital World", value: "home" },
+        { text: "What We Do", value: "whatwedo" },
+        { text: "Investor's Overview", value: "investorsoverview" },
+        { text: "Case Studies", value: "casestudies" },
+        { text: "News & Events", value: "newsandevents" },
+        { text: "Contact Us", value: "contactus" }
+      ]
     };
   },
   methods: {
     showToolbar() {
       this.$store.commit("toggleMenu");
-      console.log(this.menu);
     },
     scroll(id) {
-      if(id) {
-        const element = document.getElementById(id);
+      const element = document.getElementById(id);
+      if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
