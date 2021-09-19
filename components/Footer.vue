@@ -1,5 +1,5 @@
 <template>
-  <v-footer min-width="100%" padless color="grey darken-3" mt>
+  <v-footer min-width="100%" padless color="grey darken-3" mt absolute>
     <v-container>
       <v-card flat tile class="transparent white--text text-center">
         <v-card-text flat class="white--text text-left">

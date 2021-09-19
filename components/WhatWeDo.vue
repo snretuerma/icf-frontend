@@ -25,7 +25,7 @@
                                             </v-card-title>
                                             <v-card-text>
                                                 <v-row no-gutters>
-                                                    <v-col 
+                                                    <v-col
                                                         v-for="item in industries_card_items" :key="item.text"
                                                         cols="2"
                                                         class="fill-height" align="center" justify="center"
@@ -47,7 +47,7 @@
                                                                     :aspect-ratio="16/9"
                                                                     src="https://cdn.vuetifyjs.com/images/cards/kitchen.png"
                                                                     style="height: 100%;"
-                                                                />   
+                                                                />
                                                                 </v-expand-transition>
                                                             </div>
                                                             <v-card-text style="position: relative;" class="pt-10">
@@ -91,7 +91,7 @@
                                             </v-card-title>
                                             <v-card-text>
                                                 <v-row no-gutters>
-                                                    <v-col 
+                                                    <v-col
                                                         v-for="item in services_card_items" :key="item.text"
                                                         cols="2"
                                                         class="fill-height" align="center" justify="center"
@@ -112,7 +112,7 @@
                                                                     :aspect-ratio="16/9"
                                                                     src="https://cdn.vuetifyjs.com/images/cards/kitchen.png"
                                                                     style="height: 100%;"
-                                                                />   
+                                                                />
                                                                 </v-expand-transition>
                                                             </div>
                                                             <v-card-text style="position: relative;" class="pt-10">
@@ -191,8 +191,8 @@ export default {
   width: 100%;
 }
 .custom_divider {
-    border-color: #42A5F5 !important; 
-    border-width: 1px !important; 
+    border-color: #42A5F5 !important;
+    border-width: 1px !important;
     width: 60%;
 }
 

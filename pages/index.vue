@@ -1,46 +1,57 @@
 <template>
   <v-app>
     <Navbar/>
-    <v-main app v-scroll="onScroll">
-        <v-card tag="section" class="page-section" flat img="/images/Landing.png">
+    <v-main app>
+        <v-card tag="section" class="item page-section" flat img="/images/Landing.png">
           <LandingPage/>
         </v-card>
 
-        <v-card tag="section" class="page-section" flat img="/images/WhatWeDo.png">
+        <v-card tag="section" class="item page-section" flat img="/images/WhatWeDo.png">
           <WhatWeDo/>
         </v-card>
 
-        <v-card tag="section" class="page-section" flat img="/images/InvestorsOverview.png">
+        <v-card tag="section" class="item page-section" flat img="/images/InvestorsOverview.png">
           <InvestorsOverview/>
         </v-card>
 
-        <v-card tag="section" class="page-section" flat img="/images/CaseStudies.png">
+        <v-card tag="section" class="item page-section" flat img="/images/CaseStudies.png">
           <CaseStudies/>
         </v-card>
 
-        <v-card tag="section" class="page-section" flat img="/images/NewsEvents.png">
+        <v-card tag="section" class="item page-section" flat img="/images/NewsEvents.png">
           <NewsAndEvents/>
         </v-card>
 
-        <v-card tag="section" class="page-section" flat img="/images/ContactUs.png">
+        <v-card tag="section" class="item page-section" flat img="/images/ContactUs.png">
           <ContactUs/>
         </v-card>
     </v-main>
-    <Footer/>
   </v-app>
-  
+
 </template>
 <script>
+import cssScrollSnapPolyfill from 'css-scroll-snap-polyfill'
+
 export default {
-  
   methods: {
     onScroll () {
       this.$store.commit('onScroll')
     },
+    init (){
+        cssScrollSnapPolyfill()
+      }
+  },
+  mounted() {
+    this.init();
   }
 };
 </script>
 <style>
+html {
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+}
 @media only screen and (max-width: 600px) {
   .page-section {
     max-height: -webkit-fill-available;
@@ -52,6 +63,8 @@ export default {
 }
 .page-section {
   height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
   /* max-height: -webkit-fill-available; */
 }
 .title-accent-left{
@@ -62,4 +75,13 @@ export default {
   margin: 0px 0px 0px 10px;
   font-size: 2em;
 }
+ .item {
+    /* Set the minimum height of the items to be the same as the height of the scroll-snap-container.*/
+    min-height: 100vh;
+  }
+
+  .scroll-snap-container {
+    height: 100vh;
+    width: 100%;
+  }
 </style>
