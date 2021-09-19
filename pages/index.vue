@@ -2,29 +2,31 @@
   <v-app>
     <Navbar/>
     <v-main app>
-        <v-card tag="section" class="item page-section" flat img="/images/Landing.png">
-          <LandingPage/>
-        </v-card>
+        <div v-scroll.self="onScroll">
+          <v-card tag="section" class="item page-section" flat img="/images/Landing.png">
+            <LandingPage/>
+          </v-card>
 
-        <v-card tag="section" class="item page-section" flat img="/images/WhatWeDo.png">
-          <WhatWeDo/>
-        </v-card>
+          <v-card tag="section" class="item page-section" flat img="/images/WhatWeDo.png">
+            <WhatWeDo/>
+          </v-card>
 
-        <v-card tag="section" class="item page-section" flat img="/images/InvestorsOverview.png">
-          <InvestorsOverview/>
-        </v-card>
+          <v-card tag="section" class="item page-section" flat img="/images/InvestorsOverview.png">
+            <InvestorsOverview/>
+          </v-card>
 
-        <v-card tag="section" class="item page-section" flat img="/images/CaseStudies.png">
-          <CaseStudies/>
-        </v-card>
+          <v-card tag="section" class="item page-section" flat img="/images/CaseStudies.png">
+            <CaseStudies/>
+          </v-card>
 
-        <v-card tag="section" class="item page-section" flat img="/images/NewsEvents.png">
-          <NewsAndEvents/>
-        </v-card>
+          <v-card tag="section" class="item page-section" flat img="/images/NewsEvents.png">
+            <NewsAndEvents/>
+          </v-card>
 
-        <v-card tag="section" class="item page-section" flat img="/images/ContactUs.png">
-          <ContactUs/>
-        </v-card>
+          <v-card tag="section" class="item page-section" flat img="/images/ContactUs.png">
+            <ContactUs/>
+          </v-card>
+        </div>
     </v-main>
   </v-app>
 
@@ -35,6 +37,7 @@ import cssScrollSnapPolyfill from 'css-scroll-snap-polyfill'
 export default {
   methods: {
     onScroll () {
+      console.log("scrolling");
       this.$store.commit('onScroll')
     },
     init (){

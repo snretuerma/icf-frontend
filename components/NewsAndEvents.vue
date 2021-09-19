@@ -8,9 +8,11 @@
               <v-col
                 align="center"
                 justify="center"
-                class="primary--text card-title"
+                class="card-title"
               >
-                / NEWS & EVENTS /
+                <span class="primary--text title-accent-left">/</span>
+                <span class="white--text">NEWS & EVENTS</span>
+                <span class="primary--text title-accent-right">/</span>
               </v-col>
             </v-row>
           </v-card-title>
@@ -18,7 +20,7 @@
             <v-row no-gutters>
               <v-col>
                 <v-card flat height="100%" img="/images/news_events_bg1.png">
-                  <v-container>
+                  <v-container fluid fill-height>
                     <v-card-text>
                       <v-chip
                         class="ma-2"
@@ -29,14 +31,14 @@
                         NEWS
                       </v-chip>
                     </v-card-text>
-                    <v-card-title>
+                    <v-card-title class="white--text">
                       ICF ACQUIRES WE ARE VISTA
                     </v-card-title>
                     <v-card-text>
                       <p class="font-weight-black primary--text">
                         October 4, 2018
                       </p>
-                      <p>
+                      <p class="white--text">
                         Highly Recognized Agency will join ICF's Growing Global
                         Marketing and Communication Practice
                       </p>
@@ -55,7 +57,7 @@
 
               <v-col>
                 <v-card flat height="100%" img="/images/news_events_bg2.png">
-                  <v-container>
+                  <v-container fluid fill-height>
                     <v-card-text>
                       <v-chip
                         class="ma-2"
@@ -66,7 +68,7 @@
                         NEWS
                       </v-chip>
                     </v-card-text>
-                    <v-card-title>
+                    <v-card-title class="white--text">
                       ICF WINS $200 MILLION CONTRACT TO CONDUCT DEMOGRAPHIC AND
                       HEALTH SURVEY
                     </v-card-title>
@@ -74,7 +76,7 @@
                       <p class="font-weight-black primary--text">
                         October 16, 2018
                       </p>
-                      <p>
+                      <p class="white--text">
                         Company Will Continue ti Implement USAID's Gold Standard
                         Global Survey Research Program
                       </p>
@@ -93,7 +95,7 @@
 
               <v-col>
                 <v-card flat height="100%" img="/images/news_events_bg1.png">
-                  <v-container>
+                  <v-container fluid fill-height>
                     <v-card-text>
                       <v-chip
                         class="ma-1"
@@ -104,14 +106,14 @@
                         EVENTS
                       </v-chip>
                     </v-card-text>
-                    <v-card-title>
+                    <v-card-title class="white--text">
                       2018 SOCIETY FOR RISK ANALYSIS ANNUAL MEETING
                     </v-card-title>
                     <v-card-text>
                       <p class="font-weight-black primary--text">
                         December 2 - 6, 2018
                       </p>
-                      <p>
+                      <p class="white--text">
                         This conference is the premier opportunity to discuss
                         all avenues of rsk analysis with other enthusiasts from
                         around the globe.
@@ -131,7 +133,7 @@
 
               <v-col>
                 <v-card flat height="100%" img="/images/news_events_bg2.png">
-                  <v-container>
+                  <v-container fluid fill-height>
                     <v-card-text>
                       <v-chip
                         class="ma-2"
@@ -142,14 +144,14 @@
                         EVENTS
                       </v-chip>
                     </v-card-text>
-                    <v-card-title>
+                    <v-card-title class="white--text">
                       2018 CYBERSCI SYMPOSIUM
                     </v-card-title>
                     <v-card-text>
                       <p class="font-weight-black primary--text">
                         December 6, 2018
                       </p>
-                      <p>
+                      <p class="white--text">
                         Leaders from the U.S. Government, academia, and the
                         larger cyber community will come together under one roof
                         to discuss the questions facing cybersecurity.
@@ -168,7 +170,7 @@
               </v-col>
             </v-row>
           </v-card-text>
-          <v-card-actions>
+          <!-- <v-card-actions>
             <v-row class="my-10">
               <v-col align="center" justify="center">
                 <v-btn tile color="primary lighten-1" x-large>
@@ -179,15 +181,32 @@
                 </v-btn>
               </v-col>
             </v-row>
-          </v-card-actions>
+          </v-card-actions> -->
+
         </v-card>
       </v-col>
     </v-row>
+    <div id="view-all-events-button">
+            <v-row>
+              <v-col align="center" justify="center">
+                <v-btn tile color="primary lighten-1" x-large>
+                  VIEW ALL NEWS & EVENTS
+                  <v-icon right>
+                    mdi-arrow-right
+                  </v-icon>
+                </v-btn>
+              </v-col>
+            </v-row>
+          </div>
   </v-container>
 </template>
 
 <style>
 #card-title {
   font-size: 1.5em !important;
+}
+#view-all-events-button {
+  position: absolute;
+  top: 90vh; left: 45%;
 }
 </style>
