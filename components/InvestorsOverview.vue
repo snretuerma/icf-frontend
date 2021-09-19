@@ -158,7 +158,7 @@
                           Selected Sec Filings
                         </v-card-title>
                         <v-card-text>
-                          <v-simple-table fixed-header>
+                          <v-simple-table>
                             <template v-slot:default>
                               <thead>
                                 <tr>
@@ -268,7 +268,7 @@
                           Upcoming Events
                         </v-card-title>
                         <v-card-text>
-                          <v-simple-table fixed-header>
+                          <v-simple-table>
                             <template v-slot:default>
                               <thead>
                                 <tr>
@@ -309,7 +309,7 @@
                           Recent Webcasts & Presentations
                         </v-card-title>
                         <v-card-text>
-                          <v-simple-table fixed-header>
+                          <v-simple-table>
                             <template v-slot:default>
                               <thead>
                                 <tr>
