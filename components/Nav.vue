@@ -1,22 +1,15 @@
 <template>
-  <div>
-    <v-toolbar
-      flat
-      absolute
-      id="nav-bar-collapse"
-      color="transparent"
-      v-if="menu"
+
+    <v-app-bar
+        :collapse="!collapseOnScroll"
+        :collapse-on-scroll="collapseOnScroll"
+        fixed
+        color="transparent"
+        dark
+        flat
+        prominent
     >
-      <v-spacer></v-spacer>
-      <v-btn class="mx-4 mt-4" fab dark color="white" @click="showToolbar">
-        <v-icon color="#0D47A1">
-          mdi-menu-open
-        </v-icon>
-      </v-btn>
-    </v-toolbar>
-    <v-fade-transition v-else>
-      <v-toolbar prominent flat absolute id="nav-bar" color="transparent">
-        <v-toolbar-title id="toolbar-title">
+        <v-toolbar-title class="offset-lg-2">
           <v-img
             contain
             lazy-src="/images/logo.png"
@@ -25,8 +18,8 @@
             src="/images/logo.png"
           ></v-img>
         </v-toolbar-title>
-        <v-spacer />
-        <v-row id="toolbar" justify="end" align="center">
+        <v-spacer></v-spacer>
+        <v-row class="mt-5 mr-5" justify="end" align="center">
           <v-col cols="12" sm="10" md="10" class="py-0 my-0">
             <v-text-field
               label="SEARCH"
@@ -70,52 +63,28 @@
           </v-col>
         </v-row>
         <template v-slot:extension>
-          <v-tabs centered fixed-tabs>
+          <v-tabs right fixed-tabs>
             <v-tab class="blue--text text--darken-4">Company</v-tab>
             <v-tab class="blue--text text--darken-4">What We Do</v-tab>
             <v-tab class="blue--text text--darken-4">Investors</v-tab>
             <v-tab class="blue--text text--darken-4">Resources</v-tab>
           </v-tabs>
         </template>
-      </v-toolbar></v-fade-transition>
-  </div>
+    </v-app-bar>
+
 </template>
 
 <script>
 export default {
-  computed: {
-    menu() {
-      return this.$store.state.menu;
+    data() {
+        return {
+            collapseOnScroll: true
+        }
     }
-  },
-  methods: {
-    showToolbar() {
-      this.$store.commit("showMenu");
-    }
-  }
-};
+}
 </script>
 
-<style>
-#nav-bar {
-  padding: 50px 150px 0px 150px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-#nav-bar-collapse {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-#toolbar {
-  padding: 5px 5px 0px 5px;
-  margin: 5px 5px 0px 5px;
-}
-#toolbar-title {
-  background-color: white;
-  padding: 100px 5px 10px 5px;
-}
+<style scoped>
 .text-field-transparent .v-input__slot {
   background: transparent !important;
 }
